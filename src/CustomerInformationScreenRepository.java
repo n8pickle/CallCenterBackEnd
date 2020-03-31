@@ -11,7 +11,7 @@ public class CustomerInformationScreenRepository {
 //            System.out.println(cir.getCustomerInformation(30).getPhoneNumber());
 //            System.out.println(cir.getCustomerInformation(30).getCreditCardNumber());
 //            System.out.println(cir.getCustomerInformation(30).getCreditCardBalance());
-//        }
+      }
 
         public CustomerInfo getCustomerInformation(int ccid) {
             CustomerInfo customerInfo = null;
