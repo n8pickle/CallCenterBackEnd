@@ -19,7 +19,6 @@ import java.awt.Font;
 
 public class customerJF extends JFrame {
 
-	private JPanel contentPane;
 	int customerId;
 	String firstName;
 	String lastName;
@@ -27,6 +26,7 @@ public class customerJF extends JFrame {
 	int phoneNumber;
 	int creditCardNumber;
 	double CurrentBalance;
+
 	//customerJF currentCustomer; 
 	private JTextField txtId;
 	private JTextField txtLast;
@@ -34,9 +34,10 @@ public class customerJF extends JFrame {
 	private JTextField txtAddress;
 	private JTextField txtPhone;
 	private JTextField txtBalance;
-	public CustomerInfo currentCustomer; 
+	public CustomerInformationScreenRepository customerInformationRepository;
 	private JTextField textField;
 
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -52,43 +53,31 @@ public class customerJF extends JFrame {
 				}
 			}
 		});
-		
-	
-		
 	}
 
 	/**
 	 * Create the frame.
 	 */
 	public customerJF() {
-		
-		
-		
 		super("Customer Information"); 
 		setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		setForeground(Color.WHITE);
 		setType(Type.UTILITY);
-		
-		
-		
-		
-		
-		
+
+		customerInformationRepository = new CustomerInformationScreenRepository();
+		CustomerInfo currentCustomer = customerInformationRepository.getCustomerInformation(24);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		setSize(410, 375); 
-		
+		setSize(410, 375);
 	
 		JPanel labelPan = new JPanel(); 
 		labelPan.setBackground(Color.WHITE);
 		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
 		labelPan.setLayout(null);
-		
-		
 		
 		JLabel customerId_1 = new JLabel("Customer ID");
 		customerId_1.setFont(new Font("Cambria Math", Font.PLAIN, 17));
@@ -100,9 +89,7 @@ public class customerJF extends JFrame {
 		txtId.setBounds(127, 10, 116, 22);
 		labelPan.add(txtId);
 		txtId.setColumns(10);
-		
-			
-		
+
 		JLabel lastName_1 = new JLabel("Last Name");
 		lastName_1.setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		lastName_1.setBounds(0, 42, 92, 16);
@@ -113,9 +100,7 @@ public class customerJF extends JFrame {
 		txtLast.setBounds(127, 45, 116, 22);
 		labelPan.add(txtLast);
 		txtLast.setColumns(10);
-		
-		
-		
+
 		JLabel firstName_1 = new JLabel("First Name");
 		firstName_1.setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		firstName_1.setBounds(0, 77, 92, 16);
@@ -126,10 +111,7 @@ public class customerJF extends JFrame {
 		txtFirst.setBounds(127, 74, 116, 22);
 		labelPan.add(txtFirst);
 		txtFirst.setColumns(10);
-		
-		
-		
-		
+
 		JLabel address_1 = new JLabel("Address");
 		address_1.setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		address_1.setBounds(0, 106, 67, 16);
@@ -143,7 +125,6 @@ public class customerJF extends JFrame {
 		
 		contentPane.add(labelPan);
 		
-		
 		JLabel lblPhone = new JLabel("Phone");
 		lblPhone.setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		lblPhone.setBounds(0, 155, 56, 16);
@@ -154,9 +135,6 @@ public class customerJF extends JFrame {
 		txtPhone.setBounds(127, 152, 116, 22);
 		labelPan.add(txtPhone);
 		txtPhone.setColumns(10);
-		
-
-		
 		
 		JLabel lblBalance = new JLabel("Balance");
 		lblBalance.setFont(new Font("Cambria Math", Font.PLAIN, 17));
@@ -169,9 +147,6 @@ public class customerJF extends JFrame {
 		labelPan.add(txtBalance);
 		txtBalance.setColumns(10);
 		
-		
-		
-		
 		JLabel lblCardNumber = new JLabel("Card Number");
 		lblCardNumber.setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		lblCardNumber.setBounds(0, 196, 102, 16);
@@ -182,16 +157,5 @@ public class customerJF extends JFrame {
 		textField.setBounds(127, 193, 116, 22);
 		labelPan.add(textField);
 		textField.setColumns(10);
-		
-		
-		
-		
-		
-		
-	
-		
-	
-		
-	
 	}
 }
