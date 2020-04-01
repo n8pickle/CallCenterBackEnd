@@ -17,7 +17,7 @@ import java.awt.Window.Type;
 import java.awt.Color;
 import java.awt.Font;
 
-public class customerJF extends JFrame {
+public class CustomerJF extends JFrame {
 
 	int customerId;
 	String firstName;
@@ -46,7 +46,7 @@ public class customerJF extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					customerJF frame = new customerJF();
+					CustomerJF frame = new CustomerJF();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +58,7 @@ public class customerJF extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public customerJF() {
+	public CustomerJF() {
 		super("Customer Information"); 
 		setFont(new Font("Cambria Math", Font.PLAIN, 17));
 		setForeground(Color.WHITE);
