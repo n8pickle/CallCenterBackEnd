@@ -5,12 +5,13 @@ import java.util.Map;
 public class CustomerInformationScreenRepository {
 //        public static void main(String args[]) {
 //            CustomerInformationScreenRepository cir = new CustomerInformationScreenRepository();
-//            System.out.println(cir.getCustomerInformation(30).getFirstName());
-//            System.out.println(cir.getCustomerInformation(30).getLastName());
-//            System.out.println(cir.getCustomerInformation(30).getAddress());
-//            System.out.println(cir.getCustomerInformation(30).getPhoneNumber());
-//            System.out.println(cir.getCustomerInformation(30).getCreditCardNumber());
-//            System.out.println(cir.getCustomerInformation(30).getCreditCardBalance());
+//            CustomerInfo info = cir.getCustomerInformation(30);
+//            System.out.println(info.getFirstName());
+//            System.out.println(info.getLastName());
+//            System.out.println(info.getAddress());
+//            System.out.println(info.getPhoneNumber());
+//            System.out.println(info.getCreditCardNumber());
+//            System.out.println(info.getCreditCardBalance());
 //      }
 
         public CustomerInfo getCustomerInformation(int ccid) {
